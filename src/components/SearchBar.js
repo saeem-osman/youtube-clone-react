@@ -22,17 +22,22 @@ class SearchBar extends React.Component{
     render(){
         return(
             <div className="search-bar ui segment">
+            
                 <form onSubmit={this.onSubmitForm} className="ui form">
                     <div className="field">
-                    <label>Video Search</label>
+                    <label> <h3 className="ui header">Video Search </h3> </label>
+                    <div className="icon-bar">
+                        <i className="huge red youtube icon"></i>
                         <input 
                             type="text" 
                             value = {this.state.term}
                             onChange = {this.onChangeForm}
                         />
+                        <button className="ui red button">Submit</button>
+                        </div>
                     </div>
                 </form>
-                <h1>{this.state.term}</h1>
+                
 
             </div>
         )
